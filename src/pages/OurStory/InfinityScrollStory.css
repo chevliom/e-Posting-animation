@@ -1,0 +1,38 @@
+.scroll-container {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  gap: 25px;
+  padding: 2rem 0rem;
+  overflow: hidden;
+}
+
+.scroll-content-right {
+  display: flex;
+  animation: scrollAnimationRight 25s linear infinite;
+}
+
+.scroll-content-left {
+  display: flex;
+  animation: scrollAnimationLeft 20s linear infinite;
+}
+
+@keyframes scrollAnimationRight {
+  0% {
+    transform: translateX(100%);
+  }
+  100% {
+    transform: translateX(-100%);
+  }
+}
+
+@keyframes scrollAnimationLeft {
+  0% {
+    transform: translateX(0%);
+  }
+  100% {
+    transform: translateX(100%);
+  }
+}

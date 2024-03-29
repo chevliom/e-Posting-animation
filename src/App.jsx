@@ -17,6 +17,7 @@ function App() {
       return i * 500;
     },
   });
+
   return (
     <BrowserRouter>
       <Routes>

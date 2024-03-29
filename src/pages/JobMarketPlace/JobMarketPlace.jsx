@@ -10,7 +10,7 @@ import {
   SocialButton,
 } from "./JobMarketPlace.style";
 import Input from "../../components/Input/Input";
-import CheckBox from "../../components/checkBox/Checkbox";
+import CheckBox from "../../components/checkBox/CheckBox";
 import PrimaryButton from "../../components/Button/PrimaryButton";
 
 import logo from "../../assets/images/logo.svg";
@@ -207,7 +207,7 @@ const JobMarketPlace = () => {
                     </svg>
                     <p>Jobs marketplace</p>
                   </div>
-                  <div>
+                  <div onClick={() => navigate("/animate-arrow")}>
                     <svg
                       width="20"
                       height="20"

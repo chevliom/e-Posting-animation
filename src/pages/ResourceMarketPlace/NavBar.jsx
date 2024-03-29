@@ -1,54 +1,12 @@
 // LandingPage.jsx
-import React, { useState, useEffect, useRef } from "react";
-import anime from "animejs/lib/anime.es.js";
-import {
-  Button,
-  Header,
-  LandingPageWrapper,
-  MainPost,
-  Or,
-  SocialButton,
-} from "./Personas.style";
-import Input from "../../components/Input/Input";
-import CheckBox from "../../components/checkBox/CheckBox";
-import PrimaryButton from "../../components/Button/PrimaryButton";
+import { useState, useEffect, useRef } from "react";
+// import anime from "animejs/lib/anime.es.js";
+import { Button, Header } from "../Personas/Personas.style";
 
 import logo from "../../assets/images/logo.svg";
-import mail from "../../assets/images/mail.svg";
-import send from "../../assets/images/send.svg";
-import eye from "../../assets/images/eye.svg";
-import google from "../../assets/images/google.svg";
-import linkedIn from "../../assets/images/linkedinLanding.svg";
-import landingPageRight from "../../assets/images/landing-page-right.svg";
-
-import RotatingIcons from "../../components/landingPageRightAnim/landingPageRightAnim";
-import secondImg from "../../assets/images/second-img.svg";
-import fourthImg from "../../assets/images/fourth-img.svg";
-import fifthImg from "../../assets/images/fifth-img.png";
-import CountUp from "react-countup";
-import SlideInLeftImage from "../../components/SlidingImage/SlideInLeftImage";
-import ScrollTrigger from "react-scroll-trigger";
-import BounceHead from "../../components/SlidingImage/BounceHeads";
-import SpeakLoud from "../../components/SlidingImage/SpeakLoud";
 import { useNavigate } from "react-router-dom";
-import FirstAnimation from "../FirstAnimation/firstAnimation";
-import GirlAnimation from "../GirlAnimation/GirlAnimation";
-import BoyAnimation from "../BoyAnimation/BoyAnimation";
-import SecondAnimation from "../SecondAnimation/SecondAnimation";
-import ImageSlider from "./ImageSlider";
 
-function isInViewport(el) {
-  const rect = el.getBoundingClientRect();
-  return (
-    rect.top >= 0 &&
-    rect.left >= 0 &&
-    rect.bottom <=
-      (window.innerHeight || document.documentElement.clientHeight) &&
-    rect.right <= (window.innerWidth || document.documentElement.clientWidth)
-  );
-}
-
-const Personas = () => {
+const NavBar = () => {
   const [menu, setMenu] = useState(false);
   const [subMenu, setSubMenu] = useState(false);
 
@@ -61,31 +19,8 @@ const Personas = () => {
     }
   }, []);
 
-  const svgPath = document.querySelectorAll(".textRole");
-  const svgPathAnim = anime({
-    targets: svgPath,
-    autoplay: true,
-    fill: ["none", "#000"],
-    strokeDashoffset: [anime.setDashoffset, 0],
-    easing: "easeInOutSine",
-    duration: 700,
-    delay: anime.stagger(100, { direction: "reverse" }),
-  });
-
-  const svgPathQ = document.querySelector(".textRoleQ");
-
-  const svgPathQAnim = anime({
-    targets: svgPathQ,
-    fill: ["none", "#7367F0"],
-    autoplay: true,
-    strokeDashoffset: [anime.setDashoffset, 0],
-    easing: "easeInOutSine",
-    duration: 1500,
-    delay: anime.stagger(100, { direction: "reverse" }),
-  });
-
   return (
-    <LandingPageWrapper>
+    <>
       <section className="first" ref={topRef}>
         <Header className="d-flex align-items-center position-relative">
           <img
@@ -105,8 +40,8 @@ const Personas = () => {
                 onClick={() => setMenu(false)}
               >
                 <path
-                  fill-rule="evenodd"
-                  clip-rule="evenodd"
+                  fillRule="evenodd"
+                  clipRule="evenodd"
                   d="M22 12C22 17.5228 17.5228 22 12 22C6.47715 22 2 17.5228 2 12C2 6.47715 6.47715 2 12 2C17.5228 2 22 6.47715 22 12ZM8.96963 8.96965C9.26252 8.67676 9.73739 8.67676 10.0303 8.96965L12 10.9393L13.9696 8.96967C14.2625 8.67678 14.7374 8.67678 15.0303 8.96967C15.3232 9.26256 15.3232 9.73744 15.0303 10.0303L13.0606 12L15.0303 13.9696C15.3232 14.2625 15.3232 14.7374 15.0303 15.0303C14.7374 15.3232 14.2625 15.3232 13.9696 15.0303L12 13.0607L10.0303 15.0303C9.73742 15.3232 9.26254 15.3232 8.96965 15.0303C8.67676 14.7374 8.67676 14.2625 8.96965 13.9697L10.9393 12L8.96963 10.0303C8.67673 9.73742 8.67673 9.26254 8.96963 8.96965Z"
                   fill="#1C274C"
                 />
@@ -128,9 +63,9 @@ const Personas = () => {
                   <path
                     d="M6.56641 9L12.5664 15L18.5664 9"
                     stroke="currentColor"
-                    stroke-width="1.5"
-                    stroke-linecap="round"
-                    stroke-linejoin="round"
+                    strokeWidth="1.5"
+                    strokeLinecap="round"
+                    strokeLinejoin="round"
                   />
                 </svg>
                 <div className={`sub-menu ${subMenu ? "active" : ""}`}>
@@ -209,7 +144,7 @@ const Personas = () => {
                     </svg>
                     <p>Jobs marketplace</p>
                   </div>
-                  <div onClick={() => navigate("/animate-arrow")}>
+                  <div>
                     <svg
                       width="20"
                       height="20"
@@ -223,37 +158,37 @@ const Personas = () => {
                         cy="10"
                         r="9.53125"
                         fill="white"
-                        fill-opacity="0.2"
+                        fillOpacity="0.2"
                       />
                       <circle
                         cx="10"
                         cy="10"
                         r="9.53125"
                         fill="black"
-                        fill-opacity="0.2"
+                        fillOpacity="0.2"
                       />
                       <circle
                         cx="10"
                         cy="10"
                         r="9.53125"
                         stroke="currentColor"
-                        stroke-width="0.9375"
+                        strokeWidth="0.9375"
                       />
                       <circle
                         cx="10"
                         cy="10"
                         r="9.53125"
                         stroke="white"
-                        stroke-opacity="0.2"
-                        stroke-width="0.9375"
+                        strokeOpacity="0.2"
+                        strokeWidth="0.9375"
                       />
                       <circle
                         cx="10"
                         cy="10"
                         r="9.53125"
                         stroke="currentColor"
-                        stroke-opacity="0.2"
-                        stroke-width="0.9375"
+                        strokeOpacity="0.2"
+                        strokeWidth="0.9375"
                       />
                       <path
                         d="M11.0381 4.97388C11.0381 4.29903 10.4891 3.75 9.81424 3.75C8.19059 3.81724 8.19106 6.13078 9.81424 6.19775C10.4891 6.19775 11.0381 5.64875 11.0381 4.97388Z"
@@ -284,13 +219,16 @@ const Personas = () => {
                   </div>
                 </div>
               </span>
+
               <span className="me-5 active">User Personas</span>
+
               <span
                 className="me-0 me-md-auto cursor-pointer"
                 onClick={() => navigate("/contact-us")}
               >
                 Help
               </span>
+
               <Button className="ms-0 ms-lg-auto white -btn">Login</Button>
               <Button className="ms-0 ms-lg-2 white -btn">Join Us</Button>
             </div>
@@ -335,132 +273,9 @@ const Personas = () => {
             </svg>
           </div>
         </Header>
-
-        <div className="row m-0 align-items-center">
-          <div className="col-sm-12 col-md-12 col-lg-6 order-2 order-lg-1">
-            <MainPost>
-              <p className="mt-5 mt-lg-0 text-start text-md-start">
-                We enable you to be as competitive as you can be
-              </p>
-              <p className="sub-text text-start text-md-start mb-0 mb-lg-5">
-                ePosting provides a platform for users to showcase their skills,
-                build a track record, actively engage in industry-related
-                conversations, and connect with targeted users on the other end
-                of the jobs.
-              </p>
-              <div className="d-flex btn-group mt-4 mt-lg-0">
-                <Button className="ms-0 me-0 me-md-4 blue ms-auto ms-lg-0">
-                  Get registered
-                </Button>
-                <Button className="ms-0 blue me-auto me-lg-0">
-                  <svg
-                    xmlns="http://www.w3.org/2000/svg"
-                    width="20"
-                    height="20"
-                    viewBox="0 0 20 20"
-                    className="mb-1 me-2"
-                    fill="none"
-                  >
-                    <path
-                      fill-rule="evenodd"
-                      clip-rule="evenodd"
-                      d="M5.83325 3.33301V16.6663L16.6666 9.99967L5.83325 3.33301Z"
-                      fill="currentColor"
-                      stroke="currentColor"
-                      stroke-width="1.5"
-                      stroke-linecap="round"
-                      stroke-linejoin="round"
-                    />
-                  </svg>{" "}
-                  How it works
-                </Button>
-              </div>
-            </MainPost>
-          </div>
-          {/* <div className="col-sm-12 col-md-12 col-lg-6">
-            <img
-              src={landingPageRight}
-              alt="landingPageRight"
-              className="w-100 h-100"
-            />
-          </div> */}
-          <div className="col-sm-12 col-md-12 col-lg-6 order-1 order-lg-2">
-            <SecondAnimation />
-          </div>
-        </div>
       </section>
-      <section className="image-sliders">
-        <p>Employers and candidates are connected in unprecedented ways</p>
-        <div>
-          <ImageSlider />
-        </div>
-      </section>
-      <section className="account">
-        <p className="main-heading">
-          Join us to reimagine the way we approach finding a new job
-        </p>
-        <p className="sub-heading">
-          An ecosystem of technologies, resources and User Personas that
-          empowers each one of our users to be successful
-        </p>
-        <PrimaryButton className="fit-content">Create an account</PrimaryButton>
-      </section>
-      <footer>
-        <div className="row">
-          <div className="col-sm-12 col-md-3">
-            <div className="contents">
-              <p className="heading">Our Marketplaces</p>
-              <p>Jobs Marketplace</p>
-              <p>Resources Marketplace</p>
-            </div>
-          </div>
-          <div className="col-sm-12 col-md-3">
-            <div className="contents">
-              <p className="heading">User Personas</p>
-
-              <p>How to</p>
-            </div>
-          </div>
-          <div className="col-sm-12 col-md-3">
-            <div className="contents">
-              <p className="heading">Company</p>
-              <p>Our story</p>
-              <p>FAQ</p>
-              <p>Contact us</p>
-              <p>Partner with us</p>
-            </div>
-          </div>
-          <div className="col-sm-12 col-md-3">
-            <div className="contents">
-              <p className="heading">Get It Touch</p>
-              <Input
-                type="email"
-                name="email"
-                placeholder="Enter your email address..."
-                image={send}
-                imagePosition="right contact-us"
-              />
-              <img
-                src={linkedIn}
-                alt="linkedIn"
-                width={54}
-                className="m-auto m-md-0"
-              />
-              <p className="m-0 text-center d-block d-md-none">
-                support@eposting.com
-              </p>
-            </div>
-          </div>
-        </div>
-        <div className="copy-right d-flex align-items-center">
-          <img src={logo} alt="logo" />
-          <span className="ms-0 ms-md-auto">Privacy Policy</span>
-          <span className="ms-0 ms-md-3 me-md-auto">Terms of Use</span>
-          <span>© 2023 ePosting Corp. all rights reserved</span>
-        </div>
-      </footer>
-    </LandingPageWrapper>
+    </>
   );
 };
 
-export default Personas;
+export default NavBar;
