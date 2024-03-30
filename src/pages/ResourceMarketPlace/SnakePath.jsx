@@ -1,4 +1,4 @@
-// import "./snakePath.css";
+import "./snakePath.css";
 const SnakePath = () => {
   return (
     <>
@@ -146,7 +146,7 @@ const SnakePath = () => {
             <rect x="113" y="8" width="720" height="388" fill="#D9D9D9" />
           </mask>
 
-          {/* this is snack path  start here */}
+          {/* this is snack path start here */}
           <g mask="url(#mask0_185_1479)">
             <path
               d="M122.25 357.8C99.8805 355.43 79.5905 336.72 61.8805 302.11C44.2505 267.66 25.3705 250.05 5.74047 249.75C-25.5595 249.29 -49.9995 293.16 -50.2495 293.6L-59.0195 288.8C-57.9095 286.78 -31.4595 239.24 5.86047 239.75C29.4805 240.1 51.3205 259.52 70.7805 297.55C87.6705 330.55 106.31 347.55 126.2 348.05C159.68 348.91 187.72 303.16 189.95 299.42C191.95 294.8 211.8 251.23 252.8 241.92C281.25 235.46 312.5 247.19 345.69 276.77C369.03 297.58 392.09 305.34 414.21 299.84C450.33 290.85 473.69 256.88 489.62 225.6C505.33 194.75 514.21 149.53 551.33 137.22C583.39 126.59 611.73 152.71 630.97 175.08C648.27 195.2 666.93 204.11 686.44 201.57C743.37 194.16 792.21 94.6602 792.7 93.6602L801.7 98.0202C799.62 102.32 750.01 203.37 687.74 211.49C664.68 214.5 643.03 204.44 623.39 181.6C604.89 160.08 573.24 131.74 543.66 152.2C515.61 171.61 508.9 212.84 492.12 241.22C475.08 270.03 450.73 301.05 416.64 309.54C408.82 311.49 400.94 312.04 393.03 311.2C375.12 309.3 357.05 300.29 339.04 284.23C308.43 256.94 280.18 245.98 255.08 251.65C217.73 260.09 199.22 303.17 199.04 303.61L198.76 304.17C197.47 306.41 166.64 359.06 125.97 358.04C124.73 358.02 123.49 357.93 122.25 357.8Z"
@@ -278,7 +278,18 @@ const SnakePath = () => {
             />
           </g>
 
-          {/* this is snack path  start here */}
+          <path
+            id="arrow"
+            d="M20 0 L0 10 L20 20 Z"
+            style={{ height: "2rem", width: "2rem" }}
+            fill="#E42DCC"
+          >
+            <animateMotion dur="10s" repeatCount="">
+              <mpath xlinkHref="#path" />
+            </animateMotion>
+          </path>
+
+          {/* this is snack path end here  */}
 
           <path
             d="M102 375C116.912 375 129 362.912 129 348C129 333.088 116.912 321 102 321C87.0883 321 75 333.088 75 348C75 362.912 87.0883 375 102 375Z"
@@ -855,11 +866,81 @@ const SnakePath = () => {
               y2="260.395"
               gradientUnits="userSpaceOnUse"
             >
-              <stop stopColor="#02BDFF" />
-              <stop offset="0.2568" stopColor="#65A5BE" />
-              <stop offset="0.4784" stopColor="#8780C3" />
-              <stop offset="0.7108" stopColor="#DC35CA" />
-              <stop offset="1" stopColor="#E42CCC" />
+              <stop offset="0" style={{ stopColor: "#00bbff", opacity: "0.5" }}>
+                <animate
+                  attributeName="offset"
+                  values="0;0.03"
+                  dur="2s"
+                  begin="0s"
+                  fill="freeze"
+                  calcMode="linear"
+                />
+              </stop>
+              <stop
+                offset="0"
+                style={{ stopColor: "#65A5BE", stopOpacity: "1" }}
+              >
+                <animate
+                  attributeName="offset"
+                  values="0.03;0.4"
+                  dur="1s"
+                  begin="1s"
+                  fill="freeze"
+                  calcMode="linear"
+                />
+              </stop>
+              <stop
+                offset="0"
+                style={{ stopColor: "#8780C3", stopOpacity: "1" }}
+              >
+                <animate
+                  attributeName="offset"
+                  values="0.4;0.6"
+                  dur="1s"
+                  begin="2s"
+                  fill="freeze"
+                  calcMode="linear"
+                />
+              </stop>
+              <stop
+                offset="0"
+                style={{ stopColor: "#DC35CA", stopOpacity: "1" }}
+              >
+                <animate
+                  attributeName="offset"
+                  values="0.6;0.8"
+                  dur="1s"
+                  begin="3s"
+                  fill="freeze"
+                  calcMode="linear"
+                />
+              </stop>
+              <stop
+                offset="0"
+                style={{ stopColor: "#E42CCC", stopOpacity: "1" }}
+              >
+                <animate
+                  attributeName="offset"
+                  values="0.8;1"
+                  dur="1s"
+                  begin="4s"
+                  fill="freeze"
+                  calcMode="linear"
+                />
+              </stop>
+              <stop
+                offset="0"
+                style={{ stopColor: "rgba(0, 0, 0, 0)", stopOpacity: "1" }}
+              >
+                <animate
+                  attributeName="offset"
+                  values="1;1.01"
+                  dur="1s"
+                  begin="5s"
+                  fill="freeze"
+                  calcMode="linear"
+                />
+              </stop>
             </linearGradient>
 
             {/* snack path end here grident here */}
