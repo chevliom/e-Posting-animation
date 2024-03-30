@@ -1,27 +1,54 @@
-.scroll-container {
-  width: 100%;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  flex-direction: column;
-  gap: 25px;
-  padding: 2rem 0rem;
+.infi-container-right,
+.infi-container-left {
   overflow: hidden;
+  white-space: nowrap;
+  position: relative;
+  padding: 2rem 0rem;
 }
 
-.scroll-content-right {
-  display: flex;
-  animation: scrollAnimationRight 25s linear infinite;
+.infi-container-right:before,
+.infi-container-right:after {
+  content: "";
+  position: absolute;
+  top: 0;
+  width: 250px;
+  height: 100%;
+  z-index: 2;
 }
 
-.scroll-content-left {
-  display: flex;
+.infi-container-left:before,
+.infi-container-left:after {
+  content: "";
+  position: absolute;
+  top: 0;
+  width: 250px;
+  height: 100%;
+  z-index: 2;
+}
+
+.infi-container-right:hover .infi-content-right {
+  animation-play-state: paused;
+}
+
+.infi-container-left:hover .infi-content-right {
+  animation-play-state: paused;
+}
+
+.infi-content-right {
+  display: inline-flex;
+  gap: 24px;
+  animation: scrollAnimationRight 20s linear infinite;
+}
+
+.infi-content-left {
+  display: inline-flex;
+  gap: 24px;
   animation: scrollAnimationLeft 20s linear infinite;
 }
 
 @keyframes scrollAnimationRight {
   0% {
-    transform: translateX(100%);
+    transform: translateX(0%);
   }
   100% {
     transform: translateX(-100%);
@@ -30,10 +57,10 @@
 
 @keyframes scrollAnimationLeft {
   0% {
-    transform: translateX(0%);
+    transform: translateX(-100%);
   }
   100% {
-    transform: translateX(100%);
+    transform: translateX(0%);
   }
 }
 
