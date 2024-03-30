@@ -1,9 +1,9 @@
-@keyframes snakeMove {
-  0% {
-    stroke-dashoffset: 1000;
+@keyframes fillAnimation {
+  from {
+    width: 0;
   }
-  100% {
-    stroke-dashoffset: 0;
+  to {
+    width: 100%;
   }
 }
 
