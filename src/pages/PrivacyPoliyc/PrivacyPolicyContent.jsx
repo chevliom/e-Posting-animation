@@ -1,6 +1,7 @@
 import NavBar from "../ResourceMarketPlace/NavBar";
 import { MainPost } from "../landingPage/LandingPage.style";
 import graterthan from "./assets/graterthan.svg";
+import "./privacyPolicy.css";
 
 const PrivacyPolicyContent = () => {
   const heading1Style = {
@@ -32,20 +33,23 @@ const PrivacyPolicyContent = () => {
       <div className="mb-5 w-100" style={{}}>
         <NavBar />
 
-        <div
-          className="d-flex gap-2 align-items-center"
-          style={{ marginTop: "-4rem", paddingLeft: "8rem" }}
-        >
-          <h4 style={{ color: "#A8AAAE", fontSize: "14px", fontWeight: "400" }}>
-            Home
-          </h4>
-          <img src={graterthan} alt="graterthan" width={32} height={32} />
-          <h4 style={{ color: "#7367F0", fontSize: "14px", fontWeight: "400" }}>
-            Privacy Policy
-          </h4>
+        <div className="d-flex gap-2 align-items-center custom-padding">
+          <MainPost className="d-flex gap-2 align-items-center">
+            <h4
+              style={{ color: "#A8AAAE", fontSize: "14px", fontWeight: "400" }}
+            >
+              Home
+            </h4>
+            <img src={graterthan} alt="graterthan" width={32} height={32} />
+            <h4
+              style={{ color: "#7367F0", fontSize: "14px", fontWeight: "400" }}
+            >
+              Privacy Policy
+            </h4>
+          </MainPost>
         </div>
 
-        <div className="w-100 mb-5">
+        <div className="w-100 mb-5 custom-padding">
           <MainPost className="w-100">
             <h1 style={heading1Style}>PRIVACY POLICY</h1>
             <p style={paraStyle}>Last updated: March 18, 2024</p>
@@ -90,7 +94,7 @@ const PrivacyPolicyContent = () => {
             </div>
 
             <div className="d-flex flex-column gap-4 w-100">
-              <div className="d-flex gap-2 align-items-center w-100">
+              <div className="d-flex gap-2 w-100 custom-flex-coulmn">
                 <h4 className="p-0 m-0" style={heading4}>
                   Use of Information:
                 </h4>
@@ -121,7 +125,7 @@ const PrivacyPolicyContent = () => {
             </div>
 
             <div className="d-flex flex-column gap-4 w-100">
-              <div className="d-flex gap-2 align-items-center w-100">
+              <div className="d-flex gap-2 w-100 custom-flex-coulmn">
                 <h4 className="p-0 m-0" style={heading4}>
                   Disclosure of Information:
                 </h4>
@@ -235,7 +239,7 @@ const PrivacyPolicyContent = () => {
               </p>
             </div>
 
-            <div className="d-flex gap-2 my-4 w-100">
+            <div className="d-flex flex-column gap-2 my-4 w-100">
               <h4 className="p-0 m-0" style={heading4}>
                 Data Security:
               </h4>
@@ -248,7 +252,7 @@ const PrivacyPolicyContent = () => {
               </p>
             </div>
 
-            <div className="d-flex gap-2 my-4 w-100">
+            <div className="d-flex flex-column gap-2 my-4 w-100">
               <h4 className="p-0 m-0" style={heading4}>
                 Your Choices:
               </h4>
@@ -263,7 +267,7 @@ const PrivacyPolicyContent = () => {
               </p>
             </div>
 
-            <div className="d-flex gap-2 my-4 w-100">
+            <div className="d-flex flex-column gap-2 my-4 w-100">
               <h4 className="p-0 m-0" style={heading4}>
                 Children's Privacy:
               </h4>
@@ -276,7 +280,7 @@ const PrivacyPolicyContent = () => {
               </p>
             </div>
 
-            <div className="d-flex gap-2 my-4 w-100">
+            <div className="d-flex flex-column gap-2 my-4 w-100">
               <h4 className="p-0 m-0" style={heading4}>
                 Changes to this Policy:
               </h4>
@@ -289,16 +293,13 @@ const PrivacyPolicyContent = () => {
               </p>
             </div>
 
-            <div className="d-flex gap-2 my-4 w-100">
+            <div className="d-flex flex-column gap-2 my-4 w-100">
               <h4 className="p-0 m-0" style={heading4}>
                 Contact Us:
               </h4>
-              <p className="p-0 m-0 d-flex" style={paraStyle}>
+              <p className="p-0 m-0" style={paraStyle}>
                 If you have any questions or concerns about this Policy, please
-                contact us at
-                <span className="p-0 m-0" style={{ color: "#6B6B6B" }}>
-                  support@eposting.com
-                </span>
+                contact us at support@eposting.com
               </p>
             </div>
 

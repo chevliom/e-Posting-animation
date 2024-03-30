@@ -25,7 +25,9 @@ const Approach = () => {
           <MainPost>
             <div className="w-100 d-flex align-items-start gap-2">
               <div className="w-100">
-                <h1 style={headingStyle}>Our unique approach</h1>
+                <h1 className="custom-heading" style={headingStyle}>
+                  Our unique approach
+                </h1>
                 <p style={paraStyle}>
                   At ePosting, we prioritize simplicity when it comes to
                   obtaining and securing jobs. We understand that the process of

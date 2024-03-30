@@ -1,5 +1,6 @@
 import { MainPost } from "../landingPage/LandingPage.style";
 import jobWorkflow from "./assets/jobWorkflow.svg";
+import "./howTo.css";
 
 const JobSection = () => {
   const heading1Style = {
@@ -40,7 +41,9 @@ const JobSection = () => {
       <div className="row my-5 align-items-center w-100 custom-row-reverse">
         <div className="col-sm-12 col-md-6 col-lg-6 d-flex flex-column custom-padding-left">
           <MainPost>
-            <h1 style={heading1Style}>Candidate</h1>
+            <h1 className="custom-heading" style={heading1Style}>
+              Candidate
+            </h1>
             <div className="w-100">
               <p className="p-0 my-4" style={paraStyle}>
                 As someone seeking a job to a job opportunity, ePosting is
@@ -85,7 +88,9 @@ const JobSection = () => {
 
         <div className="col-sm-12 col-md-6 col-lg-6 d-flex flex-column custom-padding-left">
           <MainPost>
-            <h1 style={heading1Style}>Employer</h1>
+            <h1 className="custom-heading" style={heading1Style}>
+              Employer
+            </h1>
             <div className="w-100">
               <p className="p-0 my-4" style={paraStyle}>
                 For someone who can provide jobs, leveraging ePosting offers

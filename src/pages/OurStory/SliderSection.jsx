@@ -22,6 +22,7 @@ const SliderSection = () => {
   return (
     <div className="mb-5 w-100" style={{ backgroundColor: "#7367F014" }}>
       <NavBar />
+
       <div className="w-100">
         <MainPost className="w-100">
           <h1 style={headingStyle}>We’re here to help with closing jobs</h1>

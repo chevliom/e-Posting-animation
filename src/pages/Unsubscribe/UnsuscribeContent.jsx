@@ -10,7 +10,7 @@ const UnsuscribeContent = () => {
   };
   return (
     <>
-      <div className="my-5 w-100" style={{}}>
+      <div className="my-5 w-100" style={{ padding: "0em 1em" }}>
         <div
           className="w-100 d-flex flex-column gap-4 justify-content-center align-items-center"
           style={{ marginBottom: "12rem" }}
@@ -28,12 +28,14 @@ const UnsuscribeContent = () => {
           >
             <h5 style={heading5}>You will be missed</h5>
 
-            <p>
+            <p className="text-center">
               [email address] has been unsubscribed from the ePosting email
               list.
             </p>
 
-            <p>If that was a mistake or if you change your mind:</p>
+            <p className="text-center">
+              If that was a mistake or if you change your mind:
+            </p>
           </div>
 
           <div
@@ -46,7 +48,7 @@ const UnsuscribeContent = () => {
             }}
           >
             <PrimaryButton>I want to re-subscribe</PrimaryButton>
-            <p>
+            <p className="text-center">
               Question or feedback? Please contact us at support@eposting.com
             </p>
           </div>

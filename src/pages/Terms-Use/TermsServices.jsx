@@ -33,19 +33,25 @@ const TermsServices = () => {
         <NavBar />
 
         <div
-          className="d-flex gap-2 align-items-center"
-          style={{ marginTop: "-4rem", paddingLeft: "8rem" }}
+          className="d-flex gap-2 align-items-center custom-padding"
+          // style={{ marginTop: "-4rem", paddingLeft: "8rem" }}
         >
-          <h4 style={{ color: "#A8AAAE", fontSize: "14px", fontWeight: "400" }}>
-            Home
-          </h4>
-          <img src={graterthan} alt="graterthan" width={32} height={32} />
-          <h4 style={{ color: "#7367F0", fontSize: "14px", fontWeight: "400" }}>
-            Terms of Use
-          </h4>
+          <MainPost className="d-flex gap-2 align-items-center">
+            <h4
+              style={{ color: "#A8AAAE", fontSize: "14px", fontWeight: "400" }}
+            >
+              Home
+            </h4>
+            <img src={graterthan} alt="graterthan" width={32} height={32} />
+            <h4
+              style={{ color: "#7367F0", fontSize: "14px", fontWeight: "400" }}
+            >
+              Terms of Use
+            </h4>
+          </MainPost>
         </div>
 
-        <div className="w-100 mb-5">
+        <div className="w-100 mb-5 custom-padding">
           <MainPost className="w-100">
             <h1 style={heading1Style}>Terms of Use</h1>
             <p style={paraStyle}>Last updated: March 18, 2024 </p>
@@ -133,7 +139,7 @@ const TermsServices = () => {
             </div>
 
             <div className="d-flex flex-column gap-4 w-100">
-              <div className="d-flex gap-2 align-items-center w-100">
+              <div className="d-flex gap-2 custom-flex-coulmn w-100">
                 <h4 className="p-0 m-0" style={heading4}>
                   Prohibited Conduct:
                 </h4>
@@ -240,7 +246,7 @@ const TermsServices = () => {
             </div>
 
             <div className="d-flex flex-column gap-4 w-100">
-              <div className="d-flex gap-2 align-items-center w-100">
+              <div className="d-flex flex-column gap-2 w-100">
                 <h4 className="p-0 m-0" style={heading4}>
                   Payment Processing and Terms:
                 </h4>
@@ -326,7 +332,7 @@ const TermsServices = () => {
             </div>
 
             <div className="d-flex flex-column gap-4 w-100">
-              <div className="d-flex gap-2 align-items-center w-100">
+              <div className="d-flex gap-2 flex-column w-100">
                 <h4 className="p-0 m-0" style={heading4}>
                   Payment Processing and Terms:
                 </h4>
@@ -412,7 +418,7 @@ const TermsServices = () => {
             </div>
 
             <div className="d-flex flex-column gap-4 w-100">
-              <div className="d-flex gap-2 align-items-center w-100">
+              <div className="d-flex flex-column gap-2 w-100">
                 <h4 className="p-0 m-0" style={heading4}>
                   Escrow Account:
                 </h4>
@@ -586,16 +592,13 @@ const TermsServices = () => {
               </p>
             </div>
 
-            <div className="d-flex gap-2 my-4 w-100">
+            <div className="d-flex gap-2 my-4 w-100 custom-flex-coulmn">
               <h4 className="p-0 m-0" style={heading4}>
                 Contact Us:
               </h4>
               <p className="p-0 m-0 d-flex" style={paraStyle}>
                 If you have any questions about these Terms, please contact us
-                at
-                <span className="p-0 m-0" style={{ color: "#6B6B6B" }}>
-                  support@eposting.com
-                </span>
+                at support@eposting.com
               </p>
             </div>
 

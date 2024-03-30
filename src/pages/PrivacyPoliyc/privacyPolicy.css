@@ -1,0 +1,17 @@
+@media (max-width: 1200px) and (min-width: 768px) {
+  .custom-padding {
+    padding: 0rem 2.5rem;
+  }
+}
+
+@media (min-width: 1200px) {
+  .custom-padding {
+    padding-right: 2.5rem;
+  }
+}
+
+@media (max-width: 811px) {
+  .custom-flex-coulmn {
+    flex-direction: column;
+  }
+}
