@@ -16,4 +16,27 @@
     flex-direction: column !important;
     align-items: start !important;
   }
+
+  .MuiButtonBase-root {
+    display: flex !important;
+    align-items: start !important;
+  }
 }
+
+@media (max-width: 596px) {
+  .custom-heading-3 {
+    font-size: 13px !important;
+    font-weight: 400 !important;
+    color: #171725 !important;
+  }
+
+  .custom-button-style {
+    font-size: 16px !important;
+    line-height: 16px !important;
+    font-weight: 500 !important;
+  }
+}
+
+/* .MuiAccordionSummary-expandIconWrapper{
+
+} */

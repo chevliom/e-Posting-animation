@@ -91,10 +91,13 @@ const FaqContent = () => {
 
   const button = {
     border: "none",
-    background: "#0000023d",
+    background: "#4B4B4B29",
     color: "#4B4B4B",
     padding: "1rem",
+    fontSize: "18px",
     borderRadius: "5rem",
+    lineHeight: "28px",
+    fontWeight: "400",
   };
 
   return (
@@ -130,8 +133,12 @@ const FaqContent = () => {
                     alignItems: "center",
                   }}
                 >
-                  <h3 style={heading3}>{accordion.title}</h3>
-                  <button style={button}>{accordion.buttonText}</button>
+                  <h3 className="custom-heading-3" style={heading3}>
+                    {accordion.title}
+                  </h3>
+                  <button className="custom-button-style" style={button}>
+                    {accordion.buttonText}
+                  </button>
                 </div>
               </AccordionSummary>
 

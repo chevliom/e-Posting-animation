@@ -36,3 +36,23 @@
     transform: translateX(100%);
   }
 }
+
+@media (max-width: 795px) {
+  .custom-headin-1 {
+    font-size: 18px !important;
+    line-height: 24px !important;
+  }
+  .custom-para {
+    font-size: 12px !important;
+    line-height: 20px !important;
+  }
+
+  .custom-main-heading {
+    font-size: 22px !important;
+    line-height: 30px !important;
+  }
+  .custom-main-para {
+    font-size: 13px !important;
+    line-height: 20px !important;
+  }
+}

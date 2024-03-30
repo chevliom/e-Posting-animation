@@ -38,12 +38,14 @@ const TermsServices = () => {
         >
           <MainPost className="d-flex gap-2 align-items-center">
             <h4
+              className="m-0 p-0"
               style={{ color: "#A8AAAE", fontSize: "14px", fontWeight: "400" }}
             >
               Home
             </h4>
-            <img src={graterthan} alt="graterthan" width={32} height={32} />
+            <img src={graterthan} alt="graterthan" width={25} height={25} />
             <h4
+              className="m-0 p-0"
               style={{ color: "#7367F0", fontSize: "14px", fontWeight: "400" }}
             >
               Terms of Use

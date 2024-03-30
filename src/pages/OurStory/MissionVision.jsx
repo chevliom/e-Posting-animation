@@ -32,8 +32,10 @@ const MissionVision = () => {
           <MainPost>
             <div className="w-100 d-flex align-items-start gap-2">
               <div className="w-100">
-                <h1 style={headingStyle}>Our mission</h1>
-                <p style={paraStyle}>
+                <h1 className="custom-headin-1" style={headingStyle}>
+                  Our mission
+                </h1>
+                <p className="custom-para" style={paraStyle}>
                   ePosting was established with a clear mission in mind: to
                   bring jobs to the mass market.
                 </p>
@@ -48,8 +50,10 @@ const MissionVision = () => {
           <MainPost>
             <div className="w-100 d-flex align-items-start gap-2">
               <div className="w-100">
-                <h1 style={headingStyle}>Our mission</h1>
-                <p style={paraStyle}>
+                <h1 className="custom-headin-1" style={headingStyle}>
+                  Our mission
+                </h1>
+                <p className="custom-para" style={paraStyle}>
                   ePosting was established with a clear mission in mind: to
                   bring jobs to the mass market.
                 </p>

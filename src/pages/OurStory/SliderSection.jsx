@@ -25,8 +25,10 @@ const SliderSection = () => {
 
       <div className="w-100">
         <MainPost className="w-100">
-          <h1 style={headingStyle}>We’re here to help with closing jobs</h1>
-          <p style={paraStyle}>
+          <h1 className="custom-main-heading" style={headingStyle}>
+            We’re here to help with closing jobs
+          </h1>
+          <p className="custom-main-para" style={paraStyle}>
             We aim to set everyone for success by providing a platform that
             brings jobs <br /> to the mass market.
           </p>
