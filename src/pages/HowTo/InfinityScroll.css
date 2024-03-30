@@ -19,7 +19,7 @@
 }
 
 .infi-content {
-  display: inline-block;
+  display: inline-flex;
   gap: 24px;
   animation: scrollAnimation 20s linear infinite;
 }

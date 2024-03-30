@@ -55,8 +55,9 @@ const InfinityScroll = () => {
           <button style={buttonNormal}>Marketing</button>
         </div>
       </div>
+
       <div className="infi-container-left">
-        <div className="infi-content-left gap-4">
+        <div className="infi-content-left">
           <button className="ms-4" style={buttonColor}>
             Software Developer
           </button>

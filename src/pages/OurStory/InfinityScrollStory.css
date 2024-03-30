@@ -30,7 +30,7 @@
   animation-play-state: paused;
 }
 
-.infi-container-left:hover .infi-content-right {
+.infi-container-left:hover .infi-content-left {
   animation-play-state: paused;
 }
 
