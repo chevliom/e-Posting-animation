@@ -6,7 +6,7 @@ import JobMarketPlace from "../pages/JobMarketPlace/JobMarketPlace";
 import Personas from "../pages/Personas/Personas";
 import SecondAnimation from "../pages/SecondAnimation/SecondAnimation";
 import LandingPage from "../pages/landingPage/LandingPage";
-import AnimateArrow from "../pages/ResourceMarketPlace/AnimateArrow";
+import ResourcesMarketplace from "../pages/ResourceMarketPlace/ResourcesMarketplace";
 import HowTo from "../pages/HowTo/HowTo";
 import PrivacyPolicy from "../pages/PrivacyPoliyc/PrivacyPolicy";
 import Terms from "../pages/Terms-Use/Terms";
@@ -23,7 +23,7 @@ export const publicRoutes = [
   { path: "/boy", element: <BoyAnimation /> },
   { path: "/job-marketplace", element: <JobMarketPlace /> },
   { path: "/personas", element: <Personas /> },
-  { path: "/animate-arrow", element: <AnimateArrow /> },
+  { path: "/resources-marketplace", element: <ResourcesMarketplace /> },
   { path: "/how-to", element: <HowTo /> },
   { path: "/privacy-policy", element: <PrivacyPolicy /> },
   { path: "/terms-services", element: <Terms /> },

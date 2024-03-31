@@ -509,7 +509,12 @@ const ContactUs = () => {
             <div className="contents">
               <p className="heading">Our Marketplaces</p>
               <p>Jobs Marketplace</p>
-              <p>Resources Marketplace</p>
+              <p
+                onClick={() => navigate("/resources-marketplace")}
+                style={{ cursor: "pointer" }}
+              >
+                Resources Marketplace
+              </p>
             </div>
           </div>
           <div className="col-sm-12 col-md-3">
@@ -522,8 +527,15 @@ const ContactUs = () => {
           <div className="col-sm-12 col-md-3">
             <div className="contents">
               <p className="heading">Company</p>
-              <p>Our story</p>
-              <p>FAQ</p>
+              <p
+                onClick={() => navigate("/our-story")}
+                style={{ cursor: "pointer" }}
+              >
+                Our story
+              </p>
+              <p onClick={() => navigate("/faq")} style={{ cursor: "pointer" }}>
+                FAQ
+              </p>
               <p>Contact us</p>
               <p>Partner with us</p>
             </div>
@@ -552,8 +564,20 @@ const ContactUs = () => {
         </div>
         <div className="copy-right d-flex align-items-center">
           <img src={logo} alt="logo" />
-          <span className="ms-0 ms-md-auto">Privacy Policy</span>
-          <span className="ms-0 ms-md-auto">Terms of Use</span>
+          <span
+            className="ms-0 ms-md-auto"
+            onClick={() => navigate("/privacy-policy")}
+            style={{ cursor: "pointer" }}
+          >
+            Privacy Policy
+          </span>
+          <span
+            className="ms-0 ms-md-auto"
+            onClick={() => navigate("/terms-services")}
+            style={{ cursor: "pointer" }}
+          >
+            Terms of Use
+          </span>
           <span>© 2023 ePosting Corp. all rights reserved</span>
         </div>
       </footer>

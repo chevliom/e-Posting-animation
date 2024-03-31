@@ -6,7 +6,7 @@ import AnimatedImage from "./AnimatedImage";
 import Footer from "./Footer";
 import About from "./About";
 
-const AnimateArrow = () => {
+const ResourcesMarketplace = () => {
   return (
     <>
       <LandingPageWrapper>
@@ -106,4 +106,4 @@ const AnimateArrow = () => {
   );
 };
 
-export default AnimateArrow;
+export default ResourcesMarketplace;
